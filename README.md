@@ -123,30 +123,7 @@ Regex customRegex = new Regex(@"^[a-zA-Z0-9]{6,12}$");
 bool isValidCustom = password.IsCorrectPassword(customRegex); // Returns true if password matches custom pattern
 ```
 
-#### `Hash`
-
-Computes the SHA-512 hash of the given string and returns it as a Base64-encoded string.
-
-```csharp
-public static string Hash(this string text)
-```
-
-##### Parameters
-
-- `text` (string): The input string to hash.
-
-##### Returns
-
-- `string`: A Base64-encoded string representing the SHA-512 hash of the input string.
-
-##### Example
-
-```csharp
-string example = "HelloWorld";
-example.Hash();
-```
-
-### Regular Expressions
+#### Regular Expressions
 
 The library also includes default regular expression patterns for validating email addresses and Russian phone numbers.
 
@@ -280,4 +257,76 @@ public static void ShowWarning(string text, string title)
 
 ```csharp
 Notify.ShowWarning("This is a warning", "Warning");
+```
+
+### 'PasswordHelper' Class
+
+#### `GenerateSalt`
+
+Generates a cryptographically secure salt.
+
+```csharp
+public static byte[] GenerateSalt()
+```
+
+##### Returns
+
+- `byte[]`: A byte array containing the generated salt.
+
+##### Example
+
+```csharp
+byte[] salt = PasswordHelper.GenerateSalt();
+```
+
+#### `HashPassword`
+
+Hashes the given password using the specified salt.
+
+```csharp
+public static string HashPassword(this string password, byte[] salt)
+```
+
+##### Parameters
+
+- `text` (string): The string to hash.
+- `salt` (string): The salt to use in the hashing process.
+
+##### Returns
+
+- `string`: A Base64 encoded string representing the hashed password.
+
+##### Example
+
+```csharp
+string password = "securePassword";
+byte[] salt = PasswordHelper.GenerateSalt();
+string hashedPassword = password.HashPassword(salt);
+```
+
+#### `AuthenticateUser`
+
+Authenticates a user by comparing the entered password with the stored password hash and salt.
+
+```csharp
+public static bool AuthenticateUser(string enteredPassword, string storedPasswordHash, byte[] storedSalt)
+```
+
+##### Parameters
+
+- `enteredPassword` (string): The password entered by the user.
+- `storedPasswordHash` (string): The stored hash of the user's password.
+- `storedSalt` (byte[]): The salt used when the user's password was hashed.
+
+##### Returns
+
+- `bool`: True if the entered password matches the stored password hash, otherwise false.
+
+##### Example
+
+```csharp
+string enteredPassword = "securePassword";
+string storedPasswordHash = "hashedPasswordFromDatabase";
+byte[] storedSalt = GetSaltFromDatabase(); // Retrieve the salt from the database
+bool isAuthenticated = PasswordHelper.AuthenticateUser(enteredPassword, storedPasswordHash, storedSalt);
 ```
