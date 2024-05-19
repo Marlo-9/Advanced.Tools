@@ -8,15 +8,19 @@
         <Title>Advanced.Tools</Title>
         <Authors>Marlo_9</Authors>
         <Description>The library is an assistant for working with user input in the WPF application. There is support for the WPF-UI library.</Description>
-        <PackageTags>WPF, Library, User input, Validations</PackageTags>
+        <PackageTags>User_input; Validations</PackageTags>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <FileVersion>1.0.0</FileVersion>
         <NeutralLanguage>ru</NeutralLanguage>
         <RepositoryUrl>https://github.com/Marlo-9/Advanced.Tools</RepositoryUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Version>1.1.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="WPF-UI" Version="3.0.4" />
+      <None Include="../README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
 </Project>
