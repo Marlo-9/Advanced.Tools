@@ -281,12 +281,3 @@ public static void ShowWarning(string text, string title)
 ```csharp
 Notify.ShowWarning("This is a warning", "Warning");
 ```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request or report issues.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-```
