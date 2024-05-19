@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Advanced.Tools</Title>
+        <Authors>Marlo_9</Authors>
+        <Description>The library is an assistant for working with user input in the WPF application. There is support for the WPF-UI library.</Description>
+        <PackageTags>WPF, Library, User input, Validations</PackageTags>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <NeutralLanguage>ru</NeutralLanguage>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="WPF-UI" Version="3.0.4" />
+    </ItemGroup>
+
+</Project>
