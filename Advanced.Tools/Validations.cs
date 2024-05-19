@@ -6,6 +6,10 @@ namespace Advanced.Tools;
 
 public static class Validations
 {
+    public static string PasswordRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$";
+    public static string EmailRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$";
+    public static string PhoneRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$";
+    
     /// <summary>
     /// Checks if the length of the given string falls within the specified minimum and maximum length constraints.
     /// </summary>
@@ -54,7 +58,17 @@ public static class Validations
     /// </example>
     public static bool IsCorrectPassword(this string text, Regex? regex = null)
     {
-        return (regex ?? new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$")).IsMatch(text);
+        return (regex ?? new Regex(PasswordRegex)).IsMatch(text);
+    }
+
+    public static bool IsCorrectEmail(this string text, Regex? regex = null)
+    {
+        return (regex ?? new Regex(EmailRegex)).IsMatch(text);
+    }
+
+    public static bool IsCorrectPhone(this string text, Regex? regex = null)
+    {
+        return (regex ?? new Regex(PhoneRegex)).IsMatch(text);
     }
     
     /// <summary>
