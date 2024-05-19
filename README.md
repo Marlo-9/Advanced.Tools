@@ -10,6 +10,8 @@ To install the `Advanced.Tools` library, add the following to your project:
 dotnet add package Advanced.Tools
 ```
 
+---
+
 ## Usage
 
 ### `Validations` Class
@@ -132,6 +134,8 @@ public static string PasswordRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$";
 public static string EmailRegex = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
 public static string PhoneRegex = @"^(\+7|8)?[\s-]?(\(?\d{3}\)?[\s-]?)?[\d\s-]{7,10}$";
 ```
+
+---
 
 ### `Notify` Class
 
@@ -259,7 +263,9 @@ public static void ShowWarning(string text, string title)
 Notify.ShowWarning("This is a warning", "Warning");
 ```
 
-### 'PasswordHelper' Class
+---
+
+### `PasswordHelper` Class
 
 #### `GenerateSalt`
 
