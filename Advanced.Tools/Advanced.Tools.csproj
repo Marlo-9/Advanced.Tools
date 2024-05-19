@@ -12,6 +12,7 @@
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <FileVersion>1.0.0</FileVersion>
         <NeutralLanguage>ru</NeutralLanguage>
+        <RepositoryUrl>https://github.com/Marlo-9/Advanced.Tools</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
