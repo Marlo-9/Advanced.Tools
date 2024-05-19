@@ -1,6 +1,7 @@
-﻿/Advanced.Tools/obj
-/Advanced.Tools/bin
+﻿/Advanced.Tools/bin/
+/Advanced.Tools/obj
 /Advanced.Tools.sln.DotSettings.user
 /.idea/.idea.Advanced.Tools/.idea/*.xml
+/.idea/.idea.Advanced.Tools/.idea/.gitignore
 /.idea/.idea.Advanced.Tools/.idea/dictionaries
 /.vs
