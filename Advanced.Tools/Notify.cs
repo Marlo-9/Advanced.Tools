@@ -16,9 +16,21 @@ public class Notify
     /// </summary>
     public enum NotificationType
     {
+        /// <summary>
+        /// Exposes the design of the notification as an Error, takes the default value
+        /// </summary>
         Error,
+        /// <summary>
+        /// Exposes the design of the notification as an Success, takes the default value
+        /// </summary>
         Success,
+        /// <summary>
+        /// Exposes the design of the notification as an Info, takes the default value
+        /// </summary>
         Info,
+        /// <summary>
+        /// Exposes the design of the notification as an Warning, takes the default value
+        /// </summary>
         Warning
     }
 

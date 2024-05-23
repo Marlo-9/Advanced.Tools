@@ -15,7 +15,8 @@
         <RepositoryUrl>https://github.com/Marlo-9/Advanced.Tools</RepositoryUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <Version>1.2.0</Version>
+        <Version>1.2.1</Version>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
